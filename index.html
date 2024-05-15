@@ -11,15 +11,20 @@
 </head>
 
 <body>
-    <div class="input-container">
-        <textarea class="input-container-textaria" placeholder="..."></textarea>
-    </div>
+    <form>
+        <div class="input-container">
+            <textarea id="input-container-textaria-main" class="input-container-textaria" placeholder="..."></textarea>
+        </div>
 
-    <div class="left-bar-button-container">
-        <button class="left-bar-button" type="button" >
-            <p class="left-bar-button-text">save</p>
-        </button>
-    </div>
+        <div class="left-bar-button-container">
+            <!-- <textarea id="file-name-input" type="text" placeholder="title"></textarea> -->
+            <button class="left-bar-button" type="button" onclick="saveAsMD()">
+                <p class="left-bar-button-text">save</p>
+            </button>
+        </div>
+    </form>
+
+    <!-- TODO: остановился на том, что не смог сделать скрипт для сохранения -->
 </body>
 
 </html>
