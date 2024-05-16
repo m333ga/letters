@@ -64,6 +64,7 @@ body {
 #file-name-input {
   width: 70px;
   height: 30px;
+  resize: none;
 
   position: relative;
   left: 50%;
@@ -133,9 +134,8 @@ body {
 }
 
 .left-bar-button-text {
-  padding-bottom: 3.5px;
+  padding-bottom: 3.4px;
 
-  position: relative;
+  top: 50%;
   left: 50%;
-  translate: -50%;
 }
