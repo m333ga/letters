@@ -15,14 +15,28 @@
 //   window.URL.revokeObjectURL(url);
 // }
 
-function saveAsMD() {
+// function saveAsMD() {
+//   const text = document.getElementById("input-container-textaria-main").value;
+//   const blob = new Blob([text], { type: "text/markdown" });
+//   const url = URL.createObjectURL(blob);
+
+//   const a = document.createElement("a");
+//   a.href = url;
+//   a.download = "saved_text.md";
+//   document.body.appendChild(a);
+//   a.click();
+//   window.URL.revokeObjectURL(url);
+// }
+
+function saveAsFile() {
+  const fileName = document.getElementById("file-name-input").value;
   const text = document.getElementById("input-container-textaria-main").value;
-  const blob = new Blob([text], { type: "text/markdown" });
+  const blob = new Blob([text], { type: "text/plain" });
   const url = URL.createObjectURL(blob);
 
   const a = document.createElement("a");
   a.href = url;
-  a.download = "saved_text.md";
+  a.download = fileName + ".txt";
   document.body.appendChild(a);
   a.click();
   window.URL.revokeObjectURL(url);
