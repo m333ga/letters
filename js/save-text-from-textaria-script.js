@@ -1,43 +1,21 @@
-// function saveAsMD() {
-//   const file_name = document.getElementById("file-name-input").value;
-
-//   const text_from_main_page = document.getElementById(
-//     "input-container-textaria-main"
-//   ).value;
-//   const blob = new Blob([text_from_main_page], { type: "text_from_main_page/markdown" });
-//   const url = URL.createObjectURL(blob);
-
-//   const a = document.createElement("a");
-//   a.href = url;
-//   a.download = "3.md";
-//   document.body.appendChild(a);
-//   a.click();
-//   window.URL.revokeObjectURL(url);
-// }
-
-// function saveAsMD() {
-//   const text = document.getElementById("input-container-textaria-main").value;
-//   const blob = new Blob([text], { type: "text/markdown" });
-//   const url = URL.createObjectURL(blob);
-
-//   const a = document.createElement("a");
-//   a.href = url;
-//   a.download = "saved_text.md";
-//   document.body.appendChild(a);
-//   a.click();
-//   window.URL.revokeObjectURL(url);
-// }
-
-function saveAsFile() {
+function saveTextFile() {
   const fileName = document.getElementById("file-name-input").value;
-  const text = document.getElementById("input-container-textaria-main").value;
-  const blob = new Blob([text], { type: "text/plain" });
-  const url = URL.createObjectURL(blob);
 
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = fileName + ".txt";
-  document.body.appendChild(a);
-  a.click();
-  window.URL.revokeObjectURL(url);
+  const textFromMainInput = document.getElementById(
+    "input-container-textaria-main"
+  ).value;
+
+  const fileNameAsBlob = new Blob([fileName], { type: "text/plain" });
+  const textAsBlob = new Blob([textFromMainInput], { type: "text/plain" });
+  const linkToSave = document.createElement("a");
+
+  // download file
+  linkToSave.download = fileNameAsBlob + ".md";
+  linkToSave.href = window.URL.createObjectURL(textAsBlob);
+  linkToSave.style.display = "none";
+  document.body.appendChild(linkToSave);
+  link.click();
+  document.body.removeChild(linkToSave);
+
+  console.log(fileName + " " + textFromMainInput);
 }

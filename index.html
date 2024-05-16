@@ -17,16 +17,17 @@
         </div>
     </form>
 
-    <form>
-        <div class="left-bar-button-container">
-            <textarea id="file-name-input" type="text"></textarea>
-            <button class="left-bar-button" type="button" onclick="saveAsFile()">
-                <p class="left-bar-button-text">save</p>
-            </button>
-        </div>
-    </form>
+    <div class="left-bar-button-container">
+        <form>
+            <textarea id="file-name-input" type="text" placeholder="title"></textarea>
+        </form>
+        <button class="left-bar-button" type="button" onclick="saveTextFile()">
+            <p class="left-bar-button-text">save</p>
+        </button>
+    </div>
 
     <!-- TODO: остановился на том, что не смог сделать скрипт для сохранения -->
+    <script src="js/save-text-from-textaria-script.js"></script>
 </body>
 
 </html>
