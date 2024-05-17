@@ -11,15 +11,16 @@
 </head>
 
 <body>
-    <form >
+    <form oninput="fitTextareaToText()">
         <div class="input-container">
             <textarea id="input-container-textaria-main" class="input-container-textaria" placeholder="..."></textarea>
         </div>
     </form>
+    <script src="js/fit-textarea-to-text-script.js"></script>
 
     <div id="left-bar-container">
         <form>
-            <textarea id="file-name-input" type="text" placeholder="title"></textarea>
+            <input class="left-bar-element" id="file-name-input" type="text" placeholder="title"></input>
         </form>
         <button class="left-bar-element" type="button" onclick="saveTextFile()">
             <p class="left-bar-element-text">save</p>
