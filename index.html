@@ -11,46 +11,23 @@
 </head>
 
 <body>
-    <form>
+    <form >
         <div class="input-container">
             <textarea id="input-container-textaria-main" class="input-container-textaria" placeholder="..."></textarea>
         </div>
     </form>
 
-    <div class="left-bar-button-container">
+    <div id="left-bar-container">
         <form>
             <textarea id="file-name-input" type="text" placeholder="title"></textarea>
         </form>
-        <button class="left-bar-button" type="button" onclick="saveTextFile()">
-            <p class="left-bar-button-text">save</p>
+        <button class="left-bar-element" type="button" onclick="saveTextFile()">
+            <p class="left-bar-element-text">save</p>
         </button>
     </div>
 
-    <!-- TODO: остановился на том, что не смог сделать скрипт для сохранения -->
+    <!-- script -->
     <script src="js/save-text-from-textaria-script.js"></script>
-
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Получить текст из формы</title>
-    </head>
-
-    <body>
-        <h1>Введите текст для получения</h1>
-        <form id="myForm" onsubmit="getInputText(event)">
-            <input type="text" id="textInput">
-            <br>
-            <button type="submit">Получить текст</button>
-        </form>
-
-        <script src="getInputTextSimple.js"></script>
-    </body>
-
-    </html>
 </body>
 
 </html>

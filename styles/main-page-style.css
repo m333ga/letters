@@ -1,5 +1,7 @@
+/* import font */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
+/* basic settings */
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +28,7 @@ body {
   z-index: -20;
 }
 
-/* input */
+/* main texarea */
 .input-container {
   position: relative;
   min-width: 300px;
@@ -60,9 +62,56 @@ body {
   outline: none;
 }
 
+/* left control bar */
+#left-bar-container {
+  position: fixed;
+  width: 90px;
+  height: max-content;
+  padding-bottom: 30px;
+  top: 20px;
+  left: 20px;
+
+  background-color: rgba(0, 0, 0, 10%);
+  border: 0;
+  border-radius: 7px;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 5%);
+}
+
+.left-bar-element {
+  width: 70px;
+  height: 30px;
+
+  position: relative;
+  left: 50%;
+  translate: -50%;
+  top: 20px;
+
+  text-align: center;
+  justify-content: centers;
+  align-items: center;
+  vertical-align: center;
+
+  border: 0;
+  border-radius: 7px;
+
+  background-color: rgba(255, 255, 255, 80%);
+}
+
+.left-bar-element:hover {
+  background-color: #fff;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 5%);
+}
+
+.left-bar-element:active {
+  border: #000 solid 2px;
+  background-color: #000;
+  color: #fff;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 20%);
+}
+
 /* file name form */
 #file-name-input {
-  width: 70px;
+  width: 100px;
   height: 20px;
   resize: none;
 
@@ -91,52 +140,6 @@ body {
 }
 
 /* buttons */
-.left-bar-button-container {
-  position: fixed;
-  width: 90px;
-  height: max-content;
-  padding-bottom: 30px;
-  top: 20px;
-  left: 20px;
-
-  background-color: rgba(0, 0, 0, 10%);
-  border: 0;
-  border-radius: 7px;
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 5%);
-}
-
-.left-bar-button {
-  width: 70px;
-  height: 30px;
-
-  position: relative;
-  left: 50%;
-  translate: -50%;
-  top: 20px;
-
-  text-align: center;
-  justify-content: centers;
-  align-items: center;
-  vertical-align: center;
-
-  border: 0;
-  border-radius: 7px;
-
-  background-color: rgba(255, 255, 255, 80%);
-}
-
-.left-bar-button:hover {
-  background-color: #fff;
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 5%);
-}
-
-.left-bar-button:active {
-  border: #000 solid 2px;
-  background-color: #000;
-  color: #fff;
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 20%);
-}
-
 .left-bar-button-text {
   padding-bottom: 3.4px;
 
