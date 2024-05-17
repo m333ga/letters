@@ -4,13 +4,13 @@ function saveTextFile() {
     "input-container-textaria-main"
   );
 
-  const fileName = fileNameInput.value;
+  const fileName = fileNameInput.value || "text";
   const textFromMainInput = mainInputTextarea.value;
 
-  const textAsBlob = new Blob([textFromMainInput], { type: "text/plain" });
+  const textAsBlob = new Blob([textFromMainInput], { type: "text/markdown" });
 
   const linkToSave = document.createElement("a");
-  linkToSave.download = fileName;
+  linkToSave.download = fileName + ".md";
   linkToSave.href = window.URL.createObjectURL(textAsBlob);
   linkToSave.style.display = "none";
 
@@ -31,7 +31,7 @@ function saveTextFile() {
 }
 
 document.addEventListener("keydown", function (event) {
-  if (event.shiftKey && event.ctrlKey && event.key == "S") {
+  if (event.shiftKey && event.ctrlKey && event.key == "S" || event.key == "Ы") {
     saveTextFile();
   }
 });

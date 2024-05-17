@@ -25,7 +25,6 @@ body {
   height: 500px;
 
   background-color: #F1EAFF;
-  z-index: -20;
 }
 
 /* main texarea */
@@ -36,7 +35,6 @@ body {
   width: 50%;
 
   top: 20px;
-  padding-bottom: 20px;
   margin-left: calc(50% + 70px);
   translate: -50%;
 }
@@ -53,6 +51,7 @@ body {
 
   border: 0;
 
+  font-size: 1.2rem;
   word-wrap: break-word;
 
   border-radius: 7px;
