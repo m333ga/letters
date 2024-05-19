@@ -1,22 +1,23 @@
-function openTextFromFile(fileInput) {
-  const reader = new FileReader();
+function openTextFromFile() {
+  const fileInput = document.createElement("input");
+  fileInput.type = "file";
+  fileInput.accept = ".md";
+  fileInput.addEventListener("change", handleFileInput);
+  fileInput.click();
 
-  reader.onload = function (e) {
-    const fileContent = e.target.result;
-    const fileName = fileInput.files[0].name;
+  function handleFileInput(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = handleFileLoaded;
+    reader.readAsText(file);
+  }
 
-    const mainInputTextarea = document.getElementById(
+  function handleFileLoaded(event) {
+    const textFromLoadedFile = event.target.result;
+
+    const textareaElement = document.getElementById(
       "input-container-textaria-main"
     );
-
-    mainInputTextarea.value = fileContent ? fileContent.toString() : "";
-
-    mainInputTextarea.placeholder = fileName || "";
-  };
-
-  reader.onerror = function (error) {
-    console.log("Error occurred reading the file:", error);
-  };
-
-  reader.readAsText(fileInput.files[0]);
+    textareaElement.value = textFromLoadedFile;
+  }
 }

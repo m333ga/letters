@@ -18,8 +18,7 @@
             <textarea id="input-container-textaria-main" class="input-container-textaria" placeholder="..."></textarea>
         </div>
     </form>
-    <script src="js/fit-textarea-to-text-script.js"></script>
-
+    
     <div id="left-bar-container">
         <form>
             <input class="left-bar-element" id="file-name-input" type="text" placeholder="title"></input>
@@ -29,13 +28,15 @@
             <p class="left-bar-element-text">save</p>
         </button>
 
-        <button class="left-bar-element" id="left-bar-open-button" type="button" onclick="saveTextFile()">
+        <button class="left-bar-element" id="left-bar-open-button" type="button" onclick="openTextFromFile()">
             <p class="left-bar-element-text">open</p>
         </button>
     </div>
 
     <!-- script -->
     <script src="js/save-text-from-textaria-script.js"></script>
+    <script src="js/fit-textarea-to-text-script.js"></script>
+    <script src="js/open-text-from-file.js"></script>
 </body>
 
 </html>
