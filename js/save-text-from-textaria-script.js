@@ -4,7 +4,7 @@ function saveTextFile() {
     "input-container-textaria-main"
   );
 
-  const fileName = fileNameInput.value || "text";
+  const fileName = fileNameInput.value || "New File";
   const textFromMainInput = mainInputTextarea.value;
 
   const textAsBlob = new Blob([textFromMainInput], { type: "text/markdown" });

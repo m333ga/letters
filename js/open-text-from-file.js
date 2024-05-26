@@ -19,5 +19,15 @@ function openTextFromFile() {
       "input-container-textaria-main"
     );
     textareaElement.value = textFromLoadedFile;
+    fitTextareaToText();
   }
+}
+
+function fitTextareaToText() {
+  const textarea = document.getElementById("input-container-textaria-main");
+  textarea.style.height = "0px";
+  textarea.style.height = textarea.scrollHeight + 25 + "px";
+
+  const textarea_container = document.getElementById("input-container");
+  textarea_container.style.paddingBottom = 25 + "px";
 }
