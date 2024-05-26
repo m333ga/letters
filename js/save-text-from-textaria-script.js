@@ -31,7 +31,10 @@ function saveTextFile() {
 }
 
 document.addEventListener("keydown", function (event) {
-  if (event.altKeyKey && event.key == "S" || event.key == "Ы") {
+  if (
+    (event.shiftKey + event.ctrlKey && event.key == "S") ||
+    event.key == "Ы"
+  ) {
     saveTextFile();
   }
 });
